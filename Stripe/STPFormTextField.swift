@@ -215,7 +215,7 @@ enum STPFormTextFieldAutoFormattingBehavior: Int {
       let shouldModify =
         formDelegate != nil
         && formDelegate?.responds(
-          to: #selector(STPPaymentCardTextField.formTextField(_:modifyIncomingTextChange:)))
+          to: #selector(STPFormTextFieldDelegate.formTextField(_:modifyIncomingTextChange:)))
           ?? false
       var modified: NSAttributedString?
       if let attributedText = attributedText {

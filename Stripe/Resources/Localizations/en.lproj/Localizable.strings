@@ -4,14 +4,23 @@
 /* {card brand} ending in {last4} */
 "%@ Ending In %@" = "%1$@ Ending In %2$@";
 
+/* TODO */
+"+ Add card" = "+ Add card";
+
 /* Source type brand name */
 "3D Secure" = "3D Secure";
 
 /* Placeholder text for Account number entry field for BECS Debit. */
 "Account number" = "Account number";
 
+/* TODO */
+"Add" = "Add";
+
 /* Title for Add a Card view */
 "Add a Card" = "Add a Card";
+
+/* TODO */
+"Add a payment method" = "Add a payment method";
 
 /* Button to add a new credit card. */
 "Add New Card…" = "Add New Card…";
@@ -23,7 +32,8 @@
    Source type brand name */
 "Alipay" = "Alipay";
 
-/* Text for Apple Pay payment method */
+/* Text for Apple Pay payment method
+   TODO */
 "Apple Pay" = "Apple Pay";
 
 /* Caption for Apartment/Address line 2 field on address form */
@@ -48,6 +58,12 @@
 /* Title for credit card number entry field */
 "Card" = "Card";
 
+/* Card details entry form header title */
+"Card information" = "Card information";
+
+/* Label for card number entry text field */
+"Card Number" = "Card Number";
+
 /* accessibility label for text field */
 "card number" = "card number";
 
@@ -59,6 +75,9 @@
 
 /* Caption for Country field on address form */
 "Country" = "Country";
+
+/* Country selector and postal code entry form header title */
+"Country or region" = "Country or region";
 
 /* Caption for County field on address form (only countries that use county, like United Kingdom) */
 "County" = "County";
@@ -97,11 +116,11 @@
 /* Placeholder string for name entry field. */
 "Full name" = "Full name";
 
-/* Source type brand name */
-"Giropay" = "Giropay";
-
 /* Payment Method type brand name. */
 "giropay" = "giropay";
+
+/* Source type brand name */
+"Giropay" = "Giropay";
 
 /* Payment Method type brand name. */
 "GrabPay" = "GrabPay";
@@ -109,8 +128,17 @@
 /* Source type brand name */
 "iDEAL" = "iDEAL";
 
+/* Error message for card form when card number is invalid */
+"Invalid card number" = "Invalid card number";
+
+/* Error message for card entry form when CVC/CVV is invalid */
+"Invalid CVC" = "Invalid CVC";
+
 /* Spoken during VoiceOver when a form field has failed validation. */
 "Invalid data." = "Invalid data.";
+
+/* Error message for card details form when expiration date is invalid */
+"Invalid expiration date" = "Invalid expiration date";
 
 /* Shipping form error message */
 "Invalid Shipping Address" = "Invalid Shipping Address";
@@ -139,11 +167,23 @@
 /* Button to pay with a Bank Account (using FPX). */
 "Online Banking (FPX)" = "Online Banking (FPX)";
 
+/* TODO */
+"Or pay with" = "Or pay with";
+
 /* Payment Method type brand name */
 "OXXO" = "OXXO";
 
 /* Source type brand name */
 "P24" = "P24";
+
+/* TODO */
+"Pay \(localizedAmount)" = "Pay \(localizedAmount)";
+
+/* No comment provided by engineer. */
+"Pay \(localizedAmount) using" = "Pay \(localizedAmount) using";
+
+/* TODO */
+"PAY \(merchantName)" = "PAY \(merchantName)";
 
 /* Title for Payment Method screen */
 "Payment Method" = "Payment Method";
@@ -157,8 +197,12 @@
 /* Short string for postal code (text used in non-US countries) */
 "Postal" = "Postal";
 
-/* Caption for Postal Code field on address form (only shown in countries other than the United States) */
+/* Caption for Postal Code field on address form (only shown in countries other than the United States)
+   Postal code placeholder */
 "Postal Code" = "Postal Code";
+
+/* TODO */
+"Processing..." = "Processing...";
 
 /* Caption for Province field on address form (only countries that use province, like Canada) */
 "Province" = "Province";
@@ -166,8 +210,14 @@
 /* Payment Method type brand name. */
 "Przelewy24" = "Przelewy24";
 
+/* The label of a switch indicating whether to save the user's card for future payment */
+"Save this card for future payment" = "Save this card for future payment";
+
 /* Text for button to scan a credit card */
 "Scan Card" = "Scan Card";
+
+/* TODO */
+"Select a payment method" = "Select a payment method";
 
 /* Payment method brand name */
 "SEPA Debit" = "SEPA Debit";
@@ -250,6 +300,9 @@
 
 /* Short string for zip code (United States only) */
 "ZIP" = "ZIP";
+
+/* Zip code placeholder US only */
+"Zip Code" = "Zip Code";
 
 /* Caption for Zip Code field on address form (only shown when country is United States only) */
 "ZIP Code" = "ZIP Code";

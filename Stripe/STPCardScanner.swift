@@ -38,6 +38,8 @@ class STPCardScanner: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate {
   }
 
   weak var cameraView: STPCameraView?
+  
+  var feedbackGenerator: UINotificationFeedbackGenerator?
 
   @objc public var deviceOrientation: UIDeviceOrientation {
     get {
@@ -96,6 +98,8 @@ class STPCardScanner: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate {
     isScanning = true
     didTimeout = false
     timeoutStarted = false
+    feedbackGenerator = UINotificationFeedbackGenerator()
+    feedbackGenerator?.prepare()
 
     captureSessionQueue?.async(execute: {
       self.detectedNumbers = NSCountedSet()  // capacity: 5
@@ -343,6 +347,7 @@ class STPCardScanner: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate {
       DispatchQueue.main.async(execute: {
         let strongSelf = weakSelf
         strongSelf?.cameraView?.playSnapshotAnimation()
+        strongSelf?.feedbackGenerator?.notificationOccurred(.success)
       })
       videoDataOutputQueue?.asyncAfter(
         deadline: DispatchTime.now() + Double(Int64(kSTPCardScanningTimeout * Double(NSEC_PER_SEC)))
@@ -432,6 +437,7 @@ class STPCardScanner: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate {
       } else {
         STPAnalyticsClient.sharedClient.logCardScanSucceeded(withDuration: duration ?? 0.0)
       }
+      self.feedbackGenerator = nil
 
       self.cameraView?.captureSession = nil
       self.delegate?.cardScanner(self, didFinishWith: params, error: error)
